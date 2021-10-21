@@ -4,12 +4,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class LoginController {
+public class IndexController {
 
-  // Load login page
-  @GetMapping("/login")
-  public String login() {
-    return "windows/login/login-page";
+  // Index, load site
+  @GetMapping("/")
+  public String index() {
+    return "index";
   }
 
 }
