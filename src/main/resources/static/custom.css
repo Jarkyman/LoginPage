@@ -1,0 +1,24 @@
+html, body {
+    height: 100%;
+}
+
+.body-login {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+.form-signup {
+    width: 100%;
+    max-width: 660px;
+    padding: 15px;
+    margin: auto;
+}
