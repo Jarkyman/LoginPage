@@ -2,7 +2,6 @@ package com.example.loginpage.controllers;
 
 import com.example.loginpage.services.LoginService;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
