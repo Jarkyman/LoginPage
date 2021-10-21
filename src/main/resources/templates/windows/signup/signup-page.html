@@ -14,7 +14,7 @@
 
                   <div class="col-sm-6">
                       <label for="firstName" class="form-label">First name</label>
-                      <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                      <input type="text" class="form-control" id="firstName" placeholder="Firstname" value="" required="true">
                       <div class="invalid-feedback">
                           Valid first name is required.
                       </div>
@@ -22,7 +22,7 @@
 
                   <div class="col-sm-6">
                       <label for="lastName" class="form-label">Last name</label>
-                      <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                      <input type="text" class="form-control" id="lastName" placeholder="Lastname" value="" required="">
                       <div class="invalid-feedback">
                           Valid last name is required.
                       </div>
@@ -40,10 +40,26 @@
                   </div>
 
                   <div class="col-12">
-                      <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
-                      <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" placeholder="you@example.com" required="">
                       <div class="invalid-feedback">
-                          Please enter a valid email address for shipping updates.
+                          Please enter a valid email.
+                      </div>
+                  </div>
+
+                  <div class="col-12">
+                      <label for="password" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="password" placeholder="Password" required="">
+                      <div class="invalid-feedback">
+                          Please enter a valid password.
+                      </div>
+                  </div>
+
+                  <div class="col-12">
+                      <label for="passwordTwo" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="passwordTwo" placeholder="Password" required="">
+                      <div class="invalid-feedback">
+                          Please enter a valid password.
                       </div>
                   </div>
 
@@ -97,8 +113,7 @@
                   </div>
               </div>
               <hr class="my-4">
-              <button onclick="location.href='/login'" class="w-100 btn btn-primary btn-lg" type="button">Create account</button>
-          </form>
+              <button class="w-100 btn btn-primary btn-lg" type="submit">Create account</button>          </form>
       </main>
 </body>
 </html>
