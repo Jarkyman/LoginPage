@@ -3,10 +3,7 @@ package com.example.loginpage.services;
 import com.example.loginpage.models.UserModel;
 import com.example.loginpage.repositorys.DBManager;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class UserService {
 
@@ -14,7 +11,6 @@ public class UserService {
     try {
 
       Connection con = DBManager.getConnection();
-      //String SQL = ;
       PreparedStatement ps = con.prepareStatement(mySQL);
       ResultSet rs = ps.executeQuery();
       UserModel user;
@@ -25,9 +21,24 @@ public class UserService {
             rs.getString(3), // firstname
             rs.getString(4), // lastname
             rs.getString(5), // Email
-            rs.getString(6)); // password
+            rs.getString(6), // password
+            rs.getInt(7)); // Is signed in (0 = false, 1 = true)
         return user;
       }
+
+    } catch (SQLException e) {
+      System.out.println(e.getMessage());
+
+    }
+
+    return null;
+  }
+
+  public UserModel sendToUser(String mySQL) {
+    try {
+      Connection con = DBManager.getConnection();
+      Statement statement = con.createStatement();
+      statement.executeUpdate(mySQL);
 
     } catch (SQLException e) {
       System.out.println(e.getMessage());
